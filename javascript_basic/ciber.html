@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript basic</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="exe">
+        <h1 class="nivell">Nivell 1</h1>
+        <div class="exercici">
+            <h3 class="nivell">Exercici 1</h3>
+            <p>L'exercici consisteix a crear un fitxer anomenat ciber.html i mostrar per consola un 'Hola mundo' (per
+                activar la consola ->; F12). Pista: Console.log()</p>
+            <button onclick="exe1()">Resultat</button>
+            <p></p>
+        </div>
+
+        <div class="exercici">
+            <h3 class="nivell">Exercici 2</h3>
+            <p>Crea un alert que mostri el teu nom:</p>
+            <button onclick="exe2()">Resultat</button>
+            <p></p>
+        </div>
+        <div class="exercici">
+            <h3 class="nivell">Exercici 3</h3>
+            <p>Crea una variable que contingui el teu nom i un altre que contingui el teu cognom.</p>
+            <button onclick="exe3()">Resultat</button>
+            <p id="exe3"></p>
+        </div>
+        <div class="exercici">
+            <h3 class="nivell">Exercici 4</h3>
+            <p>Crea dos variables amb dos números i fes una suma entre ells.</p>
+            <input type="number" id="num1"> +
+            <input type="number" id="num2">
+            <button onclick="exe4()">Resultat</button>
+            <p id="exe4"></p>
+        </div>
+        <div class="exercici">
+            <h3 class="nivell">Exercici 5</h3>
+            <p>Crea una variable nota_examen juntament amb un alert que ens digui si l’examen ha estat aprovat o no
+                juntament amb la nota. (caldrà utilitzar un condicional IF)</p>
+            <input type="number" id="nota_examen" maxlength="10">
+            <button onclick="exe5()">Resultat</button>
+            <p id="exe5"></p>
+        </div>
+        <div class="exercici">
+            <h3 class="nivell">Exercici 6</h3>
+            <p>Reemplaça la paraula blau per la paraula verd del següent text Tinc un cotxe de color blau. Després
+                intenta fer-ho remplaçant les o per les u.</p>
+            <p id="frase">Tinc un cotxe de color blau</p>
+            <button onclick="exe6()">Resultat</button>
+            <p id="exe6"></p>
+        </div>
+        <div class="exercici">
+            <h3 class="nivell">Exercici 7</h3>
+            <p>Donat el seguit llistat d'objectes 'taula', 'cadira', 'ordinador', 'libreta', per un bucle que mostri per
+                pantalla cada objecte i la seva posició al llistat.</p>
+            <p id="frase_array">'taula', 'cadira', 'ordinador', 'libreta'</p>
+            <button onclick="exe7()">Resultat</button>
+            <p id="exe7"></p>
+        </div>
+        <div class="exercici">
+            <h3 class="nivell">Exercici 8</h3>
+            <p>Crea una funció anomenada calculadora que tingui com a entrada els següents paràmetres: operador, valor1
+                i valor2.
+                Estructura de la funció que faci sumes, restes i multiplicacions. El resultat haurà de ser mostrar per
+                pantalla.
+
+
+                function calculadora( __, __, __)
+                {
+                ……...
+                }
+
+                var resultat = calculadora('resta',40,20);</p>
+            <input type="number" id="valor1" placeholder="primer numero"> 
+            <input type="text" id="operador" placeholder="operador">
+            <input type="number" id="valor2"placeholder="segon numero">
+            <button onclick="exe8()">Resultat</button>
+            <p id="exe8"></p>
+        </div>
+
+    </div>
+    <div class="exe">
+        <h1 class="nivell">Nivell 2</h1>
+        <div class="exercici">
+            <h3 class="nivell">Exercici 1</h3>
+                <p>Aprofita la funció "calculadora" de l'exercici anterior per crear una calculadora completa amb opcions per sumar, restar, multiplicar i dividir. Hauràs de controlar el Zero com a denominador d'una divisió.</p>
+            <div class="nivell2">
+                <label for="">Primer numero</label>
+                <input type="number" id="valor1_nivell2"> 
+                <label for="">Operador</label>
+                <input type="text" id="operador_nivell2">
+                <label for="">Segon numero</label>
+                <input type="number" id="valor2_nivell2">
+                <br>
+                <button onclick="nivell2_exe1()">Resultat</button>
+            <p id="nivell2_exe"></p>
+            </div>
+            
+        </div>
+    </div>
+
+<div class="exe">
+    <h1 class="nivell">Nivell 3</h1>
+    <div class="exercici">
+        <h3 class="nivell">Exercici 1</h3>
+        <p>Ara evolucionarem el nivell 2: Crearem una interfície gràfica per tal de fer la calculadora més usable. El disseny és totalment lliure, intenta sorprendre al teu mentor.</p>
+        <button onclick="nivell2_exe1()">Resultat</button>
+        <p></p>
+    </div>
+</div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

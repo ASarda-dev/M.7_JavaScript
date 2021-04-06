@@ -1,0 +1,53 @@
+body{
+    box-sizing: border-box;
+}
+
+.exe{
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    margin: 10px 10px;
+}
+.nivell{
+background-color: rgba(31, 36, 35, 0.8);
+color: white;
+text-shadow: 3px 1px 1px black;
+padding: 5px;
+border-radius: 10px;
+
+}
+
+.exercici{
+border: 2px solid black;
+padding: 10px;
+background-color: white;
+width: 80%;
+margin: 10px 10px ;
+text-align: center;
+}
+
+.nivell2{
+    background-color: rgb(49, 46, 46);
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 10px;
+    padding: 15px;
+}
+.nivell2 label{
+    margin: 10px 10px;
+}
+
+#nivell2_exe{
+    color: black;
+    background-color: beige;
+    padding: 15px;
+    width: 150px;
+}
