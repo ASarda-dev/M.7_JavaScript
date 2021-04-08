@@ -44,25 +44,44 @@ function exe5(){
 
 // Exe6
 function exe6(){
-    var frase = document.getElementById("frase");
-    var mensaje = "";
-    console.log(frase);
-    frase.contains("blau");
-    document.getElementById("exe6").innerHTML = mensaje;
+
+    var fraseC = ["Tinc","un","cotxe","de","color","blau"];
+    // 1 opcio eliminar ultmo valor y añadir uno nuevo
+    fraseC.pop();
+    fraseC.push("verd");
+    document.getElementById("exe6").innerHTML = fraseC.join(" ") ;
+    
+    // 2opcio cambar 5 posicion por nuevo valor
+    fraseC[5]="verd";
+    // console.log(fraseC);
+    
+    // 3 opcio
+    fraseC.splice(5,1,"verd");
+    console.log(fraseC);
+
+    // 4 opcio
+    // fraseCom= document.getElementById("frase_blau").value;
+    // fraseCom.toString();
+    // console.log(fraseCom);
+    // fraseCom.join(" ");
+    
+ document.getElementById("exe6_2").innerHTML = "Tinc un cutxe de culur verd" ;
+
+
 }
 // exe7
 function exe7(){
     let frase = ['taula', 'cadira', 'ordinador', 'libreta'];
-    let myArray = frase.split(',');
     let mnsj ="";
     let i =0 ;
     for(i=0; i<frase.length; i++) {
-        frase.split('');
-        mnsj +=  frase[i] ;
+    //  console.log(frase[i] + [i]);   
+        mnsj +=  frase[i]+ " es la posició número "+[i] +"<br>" ;
     }
-    // for(i=0; i<myArray.length; i++) {
-    //     mnsj +=  myArray[i] ;
-    // }
+    // para consola
+    frase.forEach(function(elemento, indice, array) {
+        console.log(elemento, indice);
+    })
     document.getElementById("exe7").innerHTML = mnsj;
 
    
@@ -160,3 +179,117 @@ function opDivision(valor1_nivell2,valor2_nivell2){
 function opResto(valor1_nivell2,valor2_nivell2){
     return valor1_nivell2 % valor2_nivell2;
 }
+
+// Nivell 3 laCalculadora
+var operandoa;
+var operandob;
+var operacion;
+
+function init(){
+//variables
+    var resultado = document.getElementById('resultado');
+    var reset = document.getElementById('reset');
+    var suma = document.getElementById('suma');
+    var resta = document.getElementById('resta');
+    var multiplicacion = document.getElementById('multiplicacion');
+    var division = document.getElementById('division');
+    var igual = document.getElementById('igual');
+    var uno = document.getElementById('uno');
+    var dos = document.getElementById('dos');
+    var tres = document.getElementById('tres');
+    var cuatro = document.getElementById('cuatro');
+    var cinco = document.getElementById('cinco');
+    var seis = document.getElementById('seis');
+    var siete = document.getElementById('siete');
+    var ocho = document.getElementById('ocho');
+    var nueve = document.getElementById('nueve');
+    var cero = document.getElementById('cero');
+  }
+//Eventos de click
+uno.onclick = function(e){
+    resultado.textContent = resultado.textContent  + "1";
+}
+dos.onclick = function(e){
+    resultado.textContent = resultado.textContent  + "2";
+}
+tres.onclick = function(e){
+    resultado.textContent = resultado.textContent  + "3";
+}
+cuatro.onclick = function(e){
+    resultado.textContent = resultado.textContent  + "4";
+}
+cinco.onclick = function(e){
+    resultado.textContent = resultado.textContent  + "5";
+}
+seis.onclick = function(e){
+    resultado.textContent = resultado.textContent  + "6";
+}
+siete.onclick = function(e){
+    resultado.textContent = resultado.textContent  + "7";
+}
+ocho.onclick = function(e){
+    resultado.textContent = resultado.textContent  + "8";
+}
+nueve.onclick = function(e){
+    resultado.textContent = resultado.textContent  + "9";
+}
+cero.onclick = function(e){
+    resultado.textContent = resultado.textContent  + "0";
+}
+reset.onclick = function(e){
+    resetear();
+}
+suma.onclick = function(e){
+    operandoa = resultado.textContent;
+    operacion = "+";
+    limpiar();
+}
+resta.onclick = function(e){
+    operandoa = resultado.textContent;
+    operacion = "-";
+    limpiar();
+}
+multiplicacion.onclick = function(e){
+    operandoa = resultado.textContent;
+    operacion = "*";
+    limpiar();
+}
+division.onclick = function(e){
+    operandoa = resultado.textContent;
+    operacion = "/";
+    limpiar();
+}
+igual.onclick = function(e){
+    operandob = resultado.textContent;
+    resolver();
+}
+// funciones
+function limpiar(){
+    resultado.textContent = "";
+  }
+  function resetear(){
+    resultado.textContent = "";
+    operandoa = 0;
+    operandob = 0;
+    operacion = "";
+  }
+
+  function resolver(){
+    var res = 0;
+    switch(operacion){
+      case "+":
+        res = parseFloat(operandoa) + parseFloat(operandob);
+        break;
+      case "-":
+          res = parseFloat(operandoa) - parseFloat(operandob);
+          break;
+      case "*":
+        res = parseFloat(operandoa) * parseFloat(operandob);
+        break;
+      case "/":
+        res = parseFloat(operandoa) / parseFloat(operandob);
+        break;
+    }
+    resetear();
+    resultado.textContent = res;
+  }

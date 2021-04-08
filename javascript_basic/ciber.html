@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javaScript basic</title>
+    <title>JavaScript basic_ M.7 Barcelona Activa</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -52,9 +52,10 @@
             <h3 class="nivell">Exercici 6</h3>
             <p>Reemplaça la paraula blau per la paraula verd del següent text Tinc un cotxe de color blau. Després
                 intenta fer-ho remplaçant les o per les u.</p>
-            <p id="frase">Tinc un cotxe de color blau</p>
+            <p id="frase_blau">Tinc un cotxe de color <span style="color: blue;">blau</span> </p>
             <button onclick="exe6()">Resultat</button>
             <p id="exe6"></p>
+            <p id="exe6_2"></p>
         </div>
         <div class="exercici">
             <h3 class="nivell">Exercici 7</h3>
@@ -111,8 +112,29 @@
     <div class="exercici">
         <h3 class="nivell">Exercici 1</h3>
         <p>Ara evolucionarem el nivell 2: Crearem una interfície gràfica per tal de fer la calculadora més usable. El disseny és totalment lliure, intenta sorprendre al teu mentor.</p>
-        <button onclick="nivell2_exe1()">Resultat</button>
-        <p></p>
+   
+        <table class="calculadora_uno" onload="init()">
+            <tr>
+              <td colspan="4"><span id="resultado"></span></td>
+            </tr>
+            <tr>
+              <td><button id="siete">7</button></td><td><button id="ocho">8</button></td><td><button id="nueve">9</button></td><td><button id="division">/</button></td>
+            </tr>
+            <tr>
+              <td><button id="cuatro">4</button></td><td><button id="cinco">5</button></td><td><button id="seis">6</button></td><td><button id="multiplicacion">*</button></td>
+            </tr>
+            <tr>
+              <td><button id="uno">1</button></td><td><button id="dos">2</button></td><td><button id="tres">3</button></td><td><button id="resta">-</button></td>
+            </tr>
+            <tr>
+              <td><button id="igual">=</button></td><td><button id="reset">C</button></td><td><button id="cero">0</button></td><td><button id="suma">+</button></td>
+            </tr>
+            
+            <tr>
+                <td colspan="4" class="titulo">La Calculadora </td>
+            </tr>
+            
+            </table>
     </div>
 </div>
     <script src="scripts.js"></script>
