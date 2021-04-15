@@ -10,96 +10,51 @@ function exe1() {
 
 	document.getElementById("exe_1").innerHTML = mnsj;
 }
-// exe2
-// function exe2_1() {
-// 	nomArray = ["A", "L", "B", "E", "R", "T"];
-// 	mnsj = "";
-// 	let vocales = 'aeiouAEIOU';
-// 	for (i = 0; i < nomArray.length; i++) {
-// 		if (nomArray === nomArray.indexof(vocales[i])) {
-// 			mnsj += "He trobat la VOCAL:   " + vocales[i];
-// 		} else if (nomArray === nomArray.indexof(consonantes)) {
-// 			mnsj += "He trobat la CONSONANT:  " + consonantes[i];
-// 		} else {
-// 			msj += "Els noms de persones no contenen el número:  " + [i]
-// 		}
-// 	}
-
-// }
 
 function exe2() {
-	var cadena = document.getElementById("cadena").value;
-	// var cadena = prompt("Introdueix el seu nom");
-	// metodo split para separrar una cadenaenarrays
-	var lletras = cadena.split('');
-	let vocales = 'aeiouAEIOU';
-	let numeros ='123456789';
-	let msj ="";
 
-	// var lletr_vocales = lletras.match(/[aeiou]/g);
-	// var lletr_numeros = lletras.match(/[0-9]/g);
-	// console.log(lletr_vocales);
-	// console.log(lletr_numeros);
+    const valorR = document.getElementById('cadena').value.toLowerCase();
+    const valor = valorR.split('');
+    console.log(valor)
+    // const numero ="123456789";
+    // const vocales = ["a","e","i","o","u"];
+    const msj ="";
+    for(i=0;i<valor.length ;i++){
+    
+        if(!isNaN(valor[i])){
+            console.log('En el seu nom hi ha un numero '+ valor[i])
+        }
+        else if( valor[i] === "a" ) {
+            console.log('En el seu nom hi ha una vocal ' + valor[i])
+        }else if (valor[i] === "e"){
+            console.log('En el seu nom hi ha una vocal ' + valor[i])
+        }else if (valor[i] === "i"){
+            console.log('En el seu nom hi ha una vocal ' + valor[i])
+        }else if (valor[i] === "o"){
+            console.log('En el seu nom hi ha una vocal ' + valor[i])
+        }else if (valor[i] === "u"){
+            console.log('En el seu nom hi ha una vocal ' + valor[i])
+        }else {
+            console.log('En el seu nom hi ha una consonant ' + valor [i])
+        }
 
-	for(i=0;i<lletras.length;i++){
+    }
 
-		if(lletras != numeros){
-			msj = "Els noms de persones no contenen numeros ";
-			
-		} else if (lletras === lletras.includes("aeiou")) {
-			msj = "He trobat la Vocal :" ;
-		}else  {
-			msj = "He trobat la consonant" ;
-			
-		}
-	}
-	document.getElementById('exe_2').innerHTML = "Ho trobara al console.log"
-	console.log(cadena);
-	console.log(lletras);
-	console.log(msj);
+    document.getElementById("exe_2").innerHTML += "El seu nom esta composat per " + [i] +" caracters" ;
+  
 }
-
-// at ex 2
-// var cadena = prompt("Introdueix el seu nom");
-// var numchar = cadena.length; //Devuelve la longitud del string.
-// cadena = cadena.toUpperCase(); //Devuelve el string en mayúsculas o minusculas.
-// var car;
-// let vocales = 'aeiouAEIOU';
-// var msj = "";
-// var contador = 0;
-// var i;
-// for (i = 0; i < numchar; i++) {
-// 	car = cadena.charAt(i); //recupera el caracter i del string.
-// 	if ((car == "A") || (car == "E") || (car == "I") || (car == "O") || (car == "U")) {
-// 		contador++;
-// 		msj = "He trobat la Vocal :" + car;
-// 	} else if (car != vocales) {
-// 		msj = "He trobat la consonant :" + car;
-// 		contador++;
-
-// 	} else {
-// 		msj = "Els noms de persones no contenen numeros ";
-// 		break;
-// 	}
-// }
-// document.getElementById('exe_2').innerHTML = "Ho trobara al consoles.log"
 
 
 // exe3
 
 // function contar (){
 // 	var nom = document.getElementById("escriu_nom").value;
-
 // 	var nomLetras = nom.join(',');
-
-// 	console.log(nom.length);
-
 // 	var nomComplet = nom.map(function (nom, index) {
 // 		for (i = 0; i < nom.length; i++) {
 // 			return nom[i] + " => " + " posició : => " + index + "<br>";
 // 		}
 // 	})
-// 	console.log(nomComplet);
 // 	document.getElementById("exe_3").innerHTML = nomComplet;
 // }
 
@@ -129,14 +84,6 @@ function exe3() {
 
 	document.getElementById("exe_3").innerHTML = "Ho trobara al console.log" + letras_contadas;
 
-	// arraySincomas = nomArray.join();
-	// var nomComplet = nomArray.map(function (nom, index, array) {
-	// 	for (i = 0; i < nomArray.length; i++) {
-	// 		return nom[i] + " => " + " posició : => " + index + "<br>";
-	// 	}
-	// })
-	// console.log(nomArray);
-	// console.log(nomComplet);
 }
 
 // exe 4
@@ -159,7 +106,7 @@ function nivel2(){
 
 	let cadenOcurrencias =  'Una dirección de correo electrónico es la dirección que utiliza para recibir y enviar correos electrónicos. Se muestra a los destinatarios de sus correos electrónicos para que sepan quién le envió un correo electrónico. Cada dirección de correo electrónico sólo se puede asignar una vez en todo el mundo y, por lo tanto, está disponible exclusivamente para usted. No puede cambiar las direcciones de correo electrónico, pero puede eliminarlas en cualquier momento. Una dirección de correo electrónico consiste en el signo @ (arroba), el nombre de usuario delante y el dominio detrás, por ejemplo, nombre-de-usuario@ionos.es: La parte del dominio depende del dominio bajo el cual se crea la dirección de correo electrónico: en nuestro ejemplo es ionos.es. Esta información varía de proveedor a proveedor, por lo que una parte del dominio también puede ser gmail.com o gmx.es si utiliza una dirección de correo electrónico de estos proveedores. Si ha registrado su propio dominio, por ejemplo, www.el-nombre-de-sus-sueños.es, las direcciones de correo electrónico que configura para el dominio lo tienen como parte del dominio (nombre-de-usuario@el-nombre-de-sus-sueños.es o nombre-de-usuario@el-nombre-de-sus-sueños.ES). El nombre de usuario es la parte de una dirección de correo electrónico que puede seleccionar libremente en la medida de lo posible. Puede, por ejemplo, utilizar su propio nombre o el nombre o departamento de una empresa. Si utiliza una dirección de correo electrónico con un proveedor de correo como gmail.com o gmx.es, es posible que la combinación con la parte del dominio deseada ya esté registrada. En este caso, deberá considerar alternativas para el nombre de usuario de su dirección de correo electrónico. Si utiliza su propio dominio, estas restricciones no se aplican porque sólo usted puede crear direcciones de correo electrónico que coincidan con su propio dominio. En resumen, nombre-de-usuario@ionos.es es un email';  
 	// var res = cadenOcurrencias.match(/@/gi);
-
+	
 	porseparado = cadenOcurrencias.split(' ');
 	
 	porseparado.forEach(element => {
@@ -175,18 +122,18 @@ function nivel2(){
 	console.log(porseparado);
 	
 }
-	function validar_email(email) {
+function validar_email(email) {
+		let cadenOcurrencias =  'Una dirección de correo electrónico es la dirección que utiliza para recibir y enviar correos electrónicos. Se muestra a los destinatarios de sus correos electrónicos para que sepan quién le envió un correo electrónico. Cada dirección de correo electrónico sólo se puede asignar una vez en todo el mundo y, por lo tanto, está disponible exclusivamente para usted. No puede cambiar las direcciones de correo electrónico, pero puede eliminarlas en cualquier momento. Una dirección de correo electrónico consiste en el signo @ (arroba), el nombre de usuario delante y el dominio detrás, por ejemplo, nombre-de-usuario@ionos.es: La parte del dominio depende del dominio bajo el cual se crea la dirección de correo electrónico: en nuestro ejemplo es ionos.es. Esta información varía de proveedor a proveedor, por lo que una parte del dominio también puede ser gmail.com o gmx.es si utiliza una dirección de correo electrónico de estos proveedores. Si ha registrado su propio dominio, por ejemplo, www.el-nombre-de-sus-sueños.es, las direcciones de correo electrónico que configura para el dominio lo tienen como parte del dominio (nombre-de-usuario@el-nombre-de-sus-sueños.es o nombre-de-usuario@el-nombre-de-sus-sueños.ES). El nombre de usuario es la parte de una dirección de correo electrónico que puede seleccionar libremente en la medida de lo posible. Puede, por ejemplo, utilizar su propio nombre o el nombre o departamento de una empresa. Si utiliza una dirección de correo electrónico con un proveedor de correo como gmail.com o gmx.es, es posible que la combinación con la parte del dominio deseada ya esté registrada. En este caso, deberá considerar alternativas para el nombre de usuario de su dirección de correo electrónico. Si utiliza su propio dominio, estas restricciones no se aplican porque sólo usted puede crear direcciones de correo electrónico que coincidan con su propio dominio. En resumen, nombre-de-usuario@ionos.es es un email';  
 		var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 		return regex.test(email) ? true : false;
+
 	}
 
 
-function contarOcurrencias(cadena, subcadena){
-	let contarOcurrencias = 0;
-	let posicion = 0;
-
-	while((posicion = cadena.indexof(subcadena, posicion)) !== -1){
-		++contarOcurrencias;
-		posicion += subcadena.length;
-	}
-}
+	function validarEmail(valor) {
+		if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(valor)){
+		 alert("La dirección de email " + valor + " es correcta.");
+		} else {
+		 alert("La dirección de email es incorrecta.");
+		}
+	  }

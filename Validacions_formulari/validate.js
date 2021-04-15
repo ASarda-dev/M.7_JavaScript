@@ -50,7 +50,7 @@ function registerValidate() {
 		acumErrores ++;
 	}
 	
-	if(inputZip.value == "" || inputZip.length!=5) {
+	if(inputZip.value == "" /* || inputZip.length!=5 */) {
 		inputZip.classList.add("is-invalid");
 		document.getElementById("errorZip").textContent = "El codi postal no compleix els requisitis";
 		acumErrores ++;
