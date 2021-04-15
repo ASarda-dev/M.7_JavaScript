@@ -46,9 +46,9 @@ function exe2() {
 		if(lletras != numeros){
 			msj = "Els noms de persones no contenen numeros ";
 			
-		} else if (lletras === lletras.indexof(vocales)) {
+		} else if (lletras === lletras.includes("aeiou")) {
 			msj = "He trobat la Vocal :" ;
-		}else{
+		}else  {
 			msj = "He trobat la consonant" ;
 			
 		}
@@ -174,11 +174,11 @@ function nivel2(){
 	console.log();
 	console.log(porseparado);
 	
+}
 	function validar_email(email) {
 		var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 		return regex.test(email) ? true : false;
 	}
-}
 
 
 function contarOcurrencias(cadena, subcadena){
