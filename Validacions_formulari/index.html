@@ -28,14 +28,19 @@
 
 		<form method="GET" action="registrado.html" id="myFormId" onsubmit="return registerValidate()" name="myForm">
 			<div class="form-row">
-				<div class="form-group col-md-6">
+				<div class="form-group col-md-4">
 					<label for="inputEmail">Email</label>
 					<input type="text" name="inputEmail" class="form-control" id="inputEmail"placeholder="name@gmail.com">
 					<div class="invalid-feedback" id="errorEmail"></div>
 				</div>
-				<div class="form-group col-md-6">
+				<div class="form-group col-md-4">
 					<label for="inputPassword">Contrasenya</label>
-					<input type="password" name="inputPassword" class="form-control" id="inputPassword">
+					<input type="password" name="inputPassword" class="form-control" id="inputPassword"placeholder="Introdueix la contrasenya">
+					<div class="invalid-feedback" id="errorPassword"></div>
+				</div>
+				<div class="form-group col-md-4">
+					<label for="inputPassword">Repetir Contrasenya</label>
+					<input type="password" name="inputPassword" class="form-control" id="inputPassword" placeholder="Repeteix la contrasenya">
 					<div class="invalid-feedback" id="errorPassword"></div>
 				</div>
 			</div>

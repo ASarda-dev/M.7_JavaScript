@@ -101,6 +101,14 @@ function exe3() {
 	document.getElementById("exe_3_2opcio").innerHTML = "Ho trobara al console.log" + [letras_contadas] ;
 
 
+	var lletras = ["A", "L", "B", "E", "R", "T"];
+
+	const names = lletras.map(lletras =>{
+		return lletras.name;
+	})
+	console.log(lletras);
+	console.log(names);
+
 
 
 	// var letters = ["A", "L", "B", "E", "R", "T"];
