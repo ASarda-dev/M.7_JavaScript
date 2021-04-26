@@ -1,12 +1,5 @@
 const form = document.getElementById('myFormId');
 
-// const expresiones = {
-// 	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-// 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-// 	password: /^.{4,12}$/, // 4 a 12 digitos.
-// 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-// 	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
-// }
 
 function registerValidate() {
 	var acumErrores = 0;
@@ -39,7 +32,7 @@ function registerValidate() {
 
 	if(inputEmail.value == "") {
 		inputEmail.classList.add("is-invalid");
-		document.getElementById("errorEmail").textContent = "Tiene que poner su correo electrónico";
+		document.getElementById("errorEmail").textContent = "Tiene que añadir su correo electrónico";
         acumErrores ++;
     }else if(!validar_email(inputEmail.value)){
 		inputEmail.classList.add("is-invalid");
@@ -107,6 +100,14 @@ form.addEventListener('blur', (event) => {
 	if(event.target.value!='') event.target.classList.remove('is-invalid');
     registerValidate();
 }, true);
+
+// const expresiones = {
+// 	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+// 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+// 	password: /^.{4,12}$/, // 4 a 12 digitos.
+// 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+// 	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+// }
 
 function validar_nombre(name) {
 
