@@ -5,7 +5,7 @@ function registerValidate() {
 	
 	form.classList.remove('is-invalid');
 	
-	//var inputEmail = document.forms["myForm"]["inputEmail"];
+	var inputEmail = document.forms["myForm"]["inputEmail"];
 
 	var inputEmail = document.getElementById('inputEmail');
 	
